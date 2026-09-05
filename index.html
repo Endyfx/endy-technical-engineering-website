@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ENDY TECHNICAL ENGINEERING SERVICES - Air-conditioning, refrigeration, electrical, piping, installation, repairs and maintenance in Port Harcourt, Rivers State.">
+
+<meta name="description" content="ENDY TECHNICAL ENGINEERING SERVICES - Air-conditioning, refrigeration, electrical, piping, installation, repairs and maintenance.">
+
 <title>ENDY TECHNICAL ENGINEERING SERVICES</title>
 
 <style>
+
 :root{
   --blue:#0a3d91;
   --blue2:#0d5bc4;
@@ -18,17 +21,45 @@
   --shadow:0 12px 35px rgba(7,26,51,.12);
 }
 
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   margin:0;
   font-family:Arial,Helvetica,sans-serif;
   color:var(--text);
-  background:var(--white);
+  background:#fff;
   line-height:1.6;
 }
+
+/* ==============================
+   WATERMARK
+   ============================== */
+
+.watermark{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(-28deg);
+  font-size:clamp(2rem,7vw,6rem);
+  font-weight:900;
+  letter-spacing:5px;
+  white-space:nowrap;
+  color:#0a3d91;
+  opacity:.035;
+  pointer-events:none;
+  user-select:none;
+  z-index:1;
+}
+
+/* ==============================
+   GENERAL
+   ============================== */
 
 a{
   text-decoration:none;
@@ -40,11 +71,21 @@ a{
   margin:auto;
 }
 
+section{
+  padding:82px 0;
+  position:relative;
+  z-index:2;
+}
+
+/* ==============================
+   HEADER
+   ============================== */
+
 header{
   position:sticky;
   top:0;
   z-index:20;
-  background:rgba(255,255,255,.96);
+  background:rgba(255,255,255,.97);
   box-shadow:0 2px 16px rgba(0,0,0,.07);
   backdrop-filter:blur(8px);
 }
@@ -62,15 +103,15 @@ header{
   color:var(--blue);
   line-height:1.1;
   font-size:1rem;
-  max-width:280px;
+  max-width:300px;
 }
 
 .brand span{
   display:block;
   color:#162238;
-  font-size:.74rem;
-  letter-spacing:1.1px;
-  margin-top:4px;
+  font-size:.72rem;
+  letter-spacing:1px;
+  margin-top:5px;
 }
 
 .navlinks{
@@ -95,10 +136,19 @@ header{
   font-size:1rem;
 }
 
+/* ==============================
+   HERO
+   ============================== */
+
 .hero{
   background:
-    linear-gradient(115deg,rgba(5,24,54,.88),rgba(10,61,145,.72)),
+    linear-gradient(
+      115deg,
+      rgba(5,24,54,.88),
+      rgba(10,61,145,.72)
+    ),
     url('endy-tech-banner.jpg') center/cover no-repeat;
+
   min-height:650px;
   color:#fff;
   display:flex;
@@ -106,8 +156,10 @@ header{
 }
 
 .hero-content{
-  max-width:760px;
-  padding:80px 0;
+  max-width:780px;
+  padding:90px 0;
+  position:relative;
+  z-index:3;
 }
 
 .badge{
@@ -127,7 +179,7 @@ h1{
 
 .hero p{
   font-size:clamp(1rem,2vw,1.25rem);
-  max-width:700px;
+  max-width:720px;
   color:#edf5ff;
 }
 
@@ -160,9 +212,14 @@ h1{
   color:#fff;
 }
 
-section{
-  padding:82px 0;
+.btn-outline:hover{
+  background:#fff;
+  color:var(--blue);
 }
+
+/* ==============================
+   SECTION TITLE
+   ============================== */
 
 .section-title{
   text-align:center;
@@ -181,6 +238,10 @@ section{
   margin:0;
 }
 
+/* ==============================
+   SERVICES
+   ============================== */
+
 .grid{
   display:grid;
   gap:24px;
@@ -196,6 +257,8 @@ section{
   padding:28px;
   box-shadow:var(--shadow);
   border:1px solid #edf2fa;
+  position:relative;
+  z-index:3;
 }
 
 .card .icon{
@@ -219,6 +282,10 @@ section{
   margin:0;
 }
 
+/* ==============================
+   ABOUT
+   ============================== */
+
 .about{
   background:var(--light);
 }
@@ -236,6 +303,8 @@ section{
   border-radius:20px;
   padding:38px;
   box-shadow:var(--shadow);
+  position:relative;
+  z-index:3;
 }
 
 .about-box ul{
@@ -260,7 +329,13 @@ section{
   box-shadow:0 5px 15px rgba(7,26,51,.06);
   border-radius:8px;
   font-weight:700;
+  position:relative;
+  z-index:3;
 }
+
+/* ==============================
+   QUOTE
+   ============================== */
 
 .quote{
   background:linear-gradient(135deg,#071a33,#0a3d91);
@@ -280,11 +355,17 @@ section{
   margin-top:0;
 }
 
+.quote p{
+  color:#edf5ff;
+}
+
 form{
   background:#fff;
   color:var(--text);
   padding:28px;
   border-radius:18px;
+  position:relative;
+  z-index:3;
 }
 
 label{
@@ -293,7 +374,9 @@ label{
   margin:12px 0 6px;
 }
 
-input,select,textarea{
+input,
+select,
+textarea{
   width:100%;
   padding:14px;
   border:1px solid #dbe3ef;
@@ -319,6 +402,10 @@ textarea{
   background:var(--blue2);
 }
 
+/* ==============================
+   CONTACT
+   ============================== */
+
 .contact-grid{
   grid-template-columns:repeat(3,1fr);
 }
@@ -335,12 +422,37 @@ textarea{
   color:var(--blue);
 }
 
-footer{
-  background:#061426;
-  color:#c7d5e8;
-  padding:35px 0;
+/* ==============================
+   COMPANY INFORMATION
+   ============================== */
+
+.company-info{
+  max-width:800px;
+  margin:32px auto 0;
+  background:#f5f9ff;
+  border:1px solid #dce8f8;
+  border-radius:16px;
+  padding:26px;
   text-align:center;
+  color:#172033;
+  position:relative;
+  z-index:3;
 }
+
+.company-name{
+  font-size:1.2rem;
+  font-weight:900;
+  color:#0a3d91;
+  margin-bottom:10px;
+}
+
+.company-info div{
+  margin:8px 0;
+}
+
+/* ==============================
+   WHATSAPP
+   ============================== */
 
 .whatsapp{
   position:fixed;
@@ -358,17 +470,47 @@ footer{
   z-index:30;
 }
 
+.whatsapp:hover{
+  transform:scale(1.08);
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer{
+  background:#061426;
+  color:#c7d5e8;
+  padding:35px 0;
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+
+/* ==============================
+   TABLET
+   ============================== */
+
 @media(max-width:850px){
-  .services,.contact-grid{
+
+  .services,
+  .contact-grid{
     grid-template-columns:1fr 1fr;
   }
 
-  .about-grid,.quote-grid{
+  .about-grid,
+  .quote-grid{
     grid-template-columns:1fr;
   }
+
 }
 
+/* ==============================
+   MOBILE
+   ============================== */
+
 @media(max-width:650px){
+
   .navlinks{
     display:none;
     position:absolute;
@@ -394,41 +536,99 @@ footer{
     min-height:620px;
   }
 
-  .services,.contact-grid,.service-list{
+  .hero-content{
+    padding:70px 0;
+  }
+
+  .services,
+  .contact-grid,
+  .service-list{
     grid-template-columns:1fr;
   }
 
   section{
     padding:65px 0;
   }
+
+  .watermark{
+    font-size:2rem;
+    letter-spacing:2px;
+    opacity:.028;
+  }
+
 }
+
+/* ==============================
+   PRINT / SCREEN WATERMARK
+   ============================== */
+
+@media print{
+
+  .watermark{
+    opacity:.08;
+  }
+
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- COMPANY WATERMARK -->
+<div class="watermark">
+  ENDY TECHNICAL ENGINEERING SERVICES
+</div>
+
+
 <header>
+
   <div class="container nav">
+
     <a class="brand" href="#home">
+
       ENDY TECHNICAL ENGINEERING SERVICES
-      <span>AIR-CONDITIONING • ELECTRICAL • ENGINEERING</span>
+
+      <span>
+        AIR-CONDITIONING • ELECTRICAL • ENGINEERING
+      </span>
+
     </a>
 
-    <button class="menu-btn" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+    <button
+      class="menu-btn"
+      onclick="document.querySelector('.navlinks').classList.toggle('open')">
+      ☰
+    </button>
 
     <nav class="navlinks">
+
       <a href="#home">Home</a>
+
       <a href="#about">About Us</a>
+
       <a href="#services">Services</a>
+
       <a href="#quote">Get a Quote</a>
+
       <a href="#contact">Contact</a>
+
     </nav>
+
   </div>
+
 </header>
+
 
 <main>
 
+
+<!-- =========================
+     HOME
+     ========================= -->
+
 <section class="hero" id="home">
+
   <div class="container hero-content">
 
     <div class="badge">
@@ -440,105 +640,175 @@ footer{
     </h1>
 
     <p>
-      We provide reliable air-conditioning, refrigeration, electrical,
-      piping, installation, repair, servicing and maintenance solutions
-      for residential, commercial and industrial projects.
+      We provide reliable air-conditioning, refrigeration,
+      electrical, piping, installation, repair, servicing
+      and maintenance solutions for residential, commercial
+      and industrial projects.
     </p>
 
     <div class="actions">
+
       <a class="btn btn-primary" href="#quote">
         GET A FREE QUOTE
       </a>
 
-      <a class="btn btn-outline"
-         href="https://wa.me/2348134649354?text=Hello%20ENDY%20TECHNICAL%20ENGINEERING%20SERVICES%2C%20I%20need%20your%20service.">
+      <a
+        class="btn btn-outline"
+        href="https://wa.me/2348134649354?text=Hello%20ENDY%20TECHNICAL%20ENGINEERING%20SERVICES%2C%20I%20need%20your%20service.">
+
         CHAT ON WHATSAPP
+
       </a>
+
     </div>
 
   </div>
+
 </section>
 
 
+<!-- =========================
+     SERVICES
+     ========================= -->
+
 <section id="services">
+
   <div class="container">
 
     <div class="section-title">
-      <h2>Our Professional Services</h2>
+
+      <h2>
+        Our Professional Services
+      </h2>
+
       <p>
-        Quality technical solutions for homes, offices,
-        commercial facilities and industrial projects.
+        Quality technical solutions for homes,
+        offices, commercial facilities and industrial projects.
       </p>
+
     </div>
+
 
     <div class="grid services">
 
+
       <article class="card">
+
         <div class="icon">❄️</div>
-        <h3>Air-Conditioning</h3>
+
+        <h3>
+          Air-Conditioning
+        </h3>
+
         <p>
-          Installation, repair, servicing, maintenance, supply
-          and technical support for air-conditioning systems.
+          Installation, repair, servicing, maintenance,
+          supply and technical support for air-conditioning systems.
         </p>
+
       </article>
 
+
       <article class="card">
+
         <div class="icon">🧊</div>
-        <h3>Refrigeration Services</h3>
+
+        <h3>
+          Refrigeration Services
+        </h3>
+
         <p>
-          Professional refrigeration installation, repairs,
-          servicing, maintenance and related technical work.
+          Professional refrigeration installation,
+          repairs, servicing, maintenance and related technical work.
         </p>
+
       </article>
 
+
       <article class="card">
+
         <div class="icon">⚡</div>
-        <h3>Electrical Services</h3>
+
+        <h3>
+          Electrical Services
+        </h3>
+
         <p>
-          Electrical installations, repairs, fittings, wiring,
-          maintenance and technical support.
+          Electrical installations, repairs, fittings,
+          wiring, maintenance and technical support.
         </p>
+
       </article>
 
+
       <article class="card">
+
         <div class="icon">🔩</div>
-        <h3>Piping & Fittings</h3>
+
+        <h3>
+          Piping & Fittings
+        </h3>
+
         <p>
-          Conduit piping, copper piping, fittings, interlocking
-          and professional installation work.
+          Conduit piping, copper piping, fittings,
+          interlocking and professional installation work.
         </p>
+
       </article>
 
+
       <article class="card">
+
         <div class="icon">🏢</div>
-        <h3>Commercial Services</h3>
+
+        <h3>
+          Commercial Services
+        </h3>
+
         <p>
           Technical installations and maintenance solutions
           for offices, shops, facilities and commercial properties.
         </p>
+
       </article>
+
 
       <article class="card">
+
         <div class="icon">🏭</div>
-        <h3>Industrial Services</h3>
+
+        <h3>
+          Industrial Services
+        </h3>
+
         <p>
-          Industrial installation, maintenance, electrical
-          and air-conditioning technical services.
+          Industrial installation, maintenance,
+          electrical and air-conditioning technical services.
         </p>
+
       </article>
 
+
     </div>
+
   </div>
+
 </section>
 
 
+<!-- =========================
+     ABOUT
+     ========================= -->
+
 <section class="about" id="about">
+
   <div class="container about-grid">
+
 
     <div>
 
-      <div class="section-title"
-           style="text-align:left;margin:0 0 25px">
+      <div
+        class="section-title"
+        style="text-align:left;margin:0 0 25px">
 
         <h2>
           About ENDY TECHNICAL ENGINEERING SERVICES
@@ -552,13 +822,33 @@ footer{
 
       </div>
 
+
       <div class="service-list">
-        <div>Air-Conditioner Installation</div>
-        <div>AC Repairs & Servicing</div>
-        <div>Industrial & Commercial AC</div>
-        <div>Electrical Installations</div>
-        <div>Conduit Piping & Fittings</div>
-        <div>Preventive Maintenance</div>
+
+        <div>
+          Air-Conditioner Installation
+        </div>
+
+        <div>
+          AC Repairs & Servicing
+        </div>
+
+        <div>
+          Industrial & Commercial AC
+        </div>
+
+        <div>
+          Electrical Installations
+        </div>
+
+        <div>
+          Conduit Piping & Fittings
+        </div>
+
+        <div>
+          Preventive Maintenance
+        </div>
+
       </div>
 
     </div>
@@ -566,7 +856,9 @@ footer{
 
     <div class="about-box">
 
-      <h2>Company Information</h2>
+      <h2>
+        Company Information
+      </h2>
 
       <ul>
 
@@ -582,11 +874,14 @@ footer{
 
         <li>
           <strong>Address:</strong>
-          218 Aba Road, by Mountain of Fire, Rumuola Road,
-          Port Harcourt, Rivers State, Nigeria.
+          218 Aba Road, by Mountain of Fire,
+          Rumuola Road, Port Harcourt,
+          Rivers State, Nigeria.
         </li>
 
-        <li>Professional technical workmanship</li>
+        <li>
+          Professional technical workmanship
+        </li>
 
         <li>
           Residential, commercial and industrial solutions
@@ -605,16 +900,24 @@ footer{
     </div>
 
   </div>
+
 </section>
 
+
+<!-- =========================
+     QUOTE
+     ========================= -->
 
 <section class="quote" id="quote">
 
   <div class="container quote-grid">
 
+
     <div>
 
-      <h2>Request a Quotation</h2>
+      <h2>
+        Request a Quotation
+      </h2>
 
       <p>
         Tell us what you need. When you submit this form,
@@ -623,11 +926,21 @@ footer{
       </p>
 
       <p>
-        <strong>Phone / WhatsApp:</strong>
+
+        <strong>
+          Phone / WhatsApp:
+        </strong>
+
         08134649354
+
         <br>
-        <strong>Email:</strong>
+
+        <strong>
+          Email:
+        </strong>
+
         endytechnicalengineeringservic@gmail.com
+
       </p>
 
     </div>
@@ -635,80 +948,122 @@ footer{
 
     <form id="quoteForm">
 
-      <label>Full Name</label>
+
+      <label>
+        Full Name
+      </label>
+
       <input
         id="name"
         required
-        placeholder="Enter your full name"
-      >
+        placeholder="Enter your full name">
 
-      <label>Phone Number</label>
+
+      <label>
+        Phone Number
+      </label>
+
       <input
         id="phone"
         required
-        placeholder="Enter your phone number"
-      >
+        placeholder="Enter your phone number">
 
-      <label>Email Address</label>
+
+      <label>
+        Email Address
+      </label>
+
       <input
         id="email"
         type="email"
-        placeholder="Enter your email address"
-      >
+        placeholder="Enter your email address">
 
-      <label>Service Required</label>
+
+      <label>
+        Service Required
+      </label>
 
       <select id="service">
 
-        <option>Air-Conditioning Installation</option>
+        <option>
+          Air-Conditioning Installation
+        </option>
 
-        <option>AC Repair / Servicing</option>
+        <option>
+          AC Repair / Servicing
+        </option>
 
-        <option>Refrigeration Service</option>
+        <option>
+          Refrigeration Service
+        </option>
 
-        <option>Electrical Installation</option>
+        <option>
+          Electrical Installation
+        </option>
 
-        <option>Electrical Repair / Maintenance</option>
+        <option>
+          Electrical Repair / Maintenance
+        </option>
 
-        <option>Conduit Piping / Fittings</option>
+        <option>
+          Conduit Piping / Fittings
+        </option>
 
-        <option>Industrial / Commercial Service</option>
+        <option>
+          Industrial / Commercial Service
+        </option>
 
-        <option>Other</option>
+        <option>
+          Other
+        </option>
 
       </select>
 
-      <label>Describe Your Project</label>
+
+      <label>
+        Describe Your Project
+      </label>
 
       <textarea
         id="details"
         required
-        placeholder="Please describe the service or project you need..."
-      ></textarea>
+        placeholder="Please describe the service or project you need...">
+      </textarea>
+
 
       <button
         class="btn submit"
         type="submit">
+
         SEND QUOTE REQUEST ON WHATSAPP
+
       </button>
 
     </form>
 
   </div>
+
 </section>
 
+
+<!-- =========================
+     CONTACT
+     ========================= -->
 
 <section id="contact">
 
   <div class="container">
 
+
     <div class="section-title">
 
-      <h2>Contact Us</h2>
+      <h2>
+        Contact Us
+      </h2>
 
       <p>
-        Contact us for enquiries, installations, repairs,
-        servicing and maintenance.
+        Contact us for enquiries, installations,
+        repairs, servicing and maintenance.
       </p>
 
     </div>
@@ -716,11 +1071,16 @@ footer{
 
     <div class="grid contact-grid">
 
+
       <div class="card contact-item">
 
-        <div class="icon">📞</div>
+        <div class="icon">
+          📞
+        </div>
 
-        <strong>Phone</strong>
+        <strong>
+          Phone
+        </strong>
 
         <a href="tel:08134649354">
           08134649354
@@ -731,9 +1091,13 @@ footer{
 
       <div class="card contact-item">
 
-        <div class="icon">💬</div>
+        <div class="icon">
+          💬
+        </div>
 
-        <strong>WhatsApp</strong>
+        <strong>
+          WhatsApp
+        </strong>
 
         <a href="https://wa.me/2348134649354">
           08134649354
@@ -744,9 +1108,13 @@ footer{
 
       <div class="card contact-item">
 
-        <div class="icon">✉️</div>
+        <div class="icon">
+          ✉️
+        </div>
 
-        <strong>Email</strong>
+        <strong>
+          Email
+        </strong>
 
         <a href="mailto:endytechnicalengineeringservic@gmail.com">
           endytechnicalengineeringservic@gmail.com
@@ -754,42 +1122,32 @@ footer{
 
       </div>
 
+
     </div>
 
 
-    <div style="
-      max-width:800px;
-      margin:32px auto 0;
-      background:#f5f9ff;
-      border:1px solid #dce8f8;
-      border-radius:16px;
-      padding:26px;
-      text-align:center;
-      color:#172033;
-    ">
+    <div class="company-info">
 
-      <div style="
-        font-size:1.2rem;
-        font-weight:900;
-        color:#0a3d91;
-        margin-bottom:10px;
-      ">
+      <div class="company-name">
         ENDY TECHNICAL ENGINEERING SERVICES
       </div>
 
-      <div style="margin:8px 0">
+      <div>
         <strong>
           🏢 Business Name Registration No.:
         </strong>
+
         7832676
       </div>
 
-      <div style="margin:8px 0">
+      <div>
         <strong>
           📍 Company Address:
         </strong>
-        218 Aba Road, by Mountain of Fire, Rumuola Road,
-        Port Harcourt, Rivers State, Nigeria.
+
+        218 Aba Road, by Mountain of Fire,
+        Rumuola Road, Port Harcourt,
+        Rivers State, Nigeria.
       </div>
 
     </div>
@@ -801,13 +1159,23 @@ footer{
 </main>
 
 
+<!-- =========================
+     FLOATING WHATSAPP
+     ========================= -->
+
 <a
   class="whatsapp"
   href="https://wa.me/2348134649354?text=Hello%20ENDY%20TECHNICAL%20ENGINEERING%20SERVICES%2C%20I%20need%20your%20service."
   aria-label="Chat on WhatsApp">
+
   💬
+
 </a>
 
+
+<!-- =========================
+     FOOTER
+     ========================= -->
 
 <footer>
 
@@ -828,13 +1196,16 @@ footer{
 
     <br>
 
-    218 Aba Road, by Mountain of Fire, Rumuola Road,
-    Port Harcourt, Rivers State, Nigeria.
+    218 Aba Road, by Mountain of Fire,
+    Rumuola Road, Port Harcourt,
+    Rivers State, Nigeria.
 
     <p>
+
       © <span id="year"></span>
       ENDY TECHNICAL ENGINEERING SERVICES.
       All rights reserved.
+
     </p>
 
   </div>
@@ -844,9 +1215,13 @@ footer{
 
 <script>
 
+/* CURRENT YEAR */
+
 document.getElementById('year').textContent =
   new Date().getFullYear();
 
+
+/* WHATSAPP QUOTATION FORM */
 
 document.getElementById('quoteForm')
 .addEventListener('submit', function(e){
